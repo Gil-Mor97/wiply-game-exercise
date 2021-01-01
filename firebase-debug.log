@@ -1,0 +1,88 @@
+[debug] [2021-01-01T23:32:20.885Z] ----------------------------------------------------------------------
+[debug] [2021-01-01T23:32:20.887Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\gilmo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-01-01T23:32:20.888Z] CLI Version:   9.1.0
+[debug] [2021-01-01T23:32:20.888Z] Platform:      win32
+[debug] [2021-01-01T23:32:20.888Z] Node Version:  v14.15.1
+[debug] [2021-01-01T23:32:20.890Z] Time:          Sat Jan 02 2021 01:32:20 GMT+0200 (שעון ישראל (חורף))
+[debug] [2021-01-01T23:32:20.890Z] ----------------------------------------------------------------------
+[debug] [2021-01-01T23:32:20.890Z] 
+[debug] [2021-01-01T23:32:20.898Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-01T23:32:20.899Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\gilmo\Documents\Wiply\wiply-game-exercise
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using wiply-game-exercise. 
+[debug] [2021-01-01T23:32:51.419Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/wiply-game-exercise  
+ 
+[debug] [2021-01-01T23:32:51.807Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 01 Jan 2021 23:32:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2021-01-01T23:32:51.810Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/wiply-game-exercise/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-01-01T23:32:52.805Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 01 Jan 2021 23:32:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2021-01-01T23:32:52.807Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/wiply-game-exercise  
+ 
+[debug] [2021-01-01T23:32:53.153Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 01 Jan 2021 23:32:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-01T23:32:53.154Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/wiply-game-exercise/locations/-/instances/wiply-game-exercise-default-rtdb  
+ 
+[debug] [2021-01-01T23:32:53.664Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 01 Jan 2021 23:32:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2021-01-01T23:32:58.359Z] >>> HTTP REQUEST GET https://wiply-game-exercise-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json  
+ 
+[debug] [2021-01-01T23:32:58.699Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Fri, 01 Jan 2021 23:32:59 GMT","content-type":"application/json; charset=utf-8","content-length":"61","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] +  Database Rules for wiply-game-exercise-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-01-01T23:33:09.591Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-01-01T23:33:09.816Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-01-01T23:33:09.816Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.2.1","browserURL":"https://www.gstatic.com/firebasejs/8.2.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.2.1/firebase.tgz"},"live":{"version":"8.2","browserURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js","auth":"https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.2.1/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.2.1/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.2.1/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.2.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.2.1/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.memory.js"}}
+[info] i  Skipping write of dist/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\gilmo\Documents\Wiply\wiply-game-exercise 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=782272098&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-01-01T23:33:14.903Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"0776bc869f88411a7311","redirect_uri":"http://localhost:9005","state":"782272098"}
+[debug] [2021-01-01T23:33:15.325Z] <<< HTTP RESPONSE 200 {"date":"Fri, 01 Jan 2021 23:33:16 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","server":"GitHub.com","status":"200 OK","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding","etag":"W/\"76c619d20bfe601c8b595a090cb4a711\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"1; mode=block","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-5029ae85.js gist.github.com/socket-worker-5029ae85.js","x-github-request-id":"04A8:651F:6888051:952FD9E:5FEFB13C"}
+[debug] [2021-01-01T23:33:15.326Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-01-01T23:33:16.725Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-01-01T23:33:16.725Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Gil-Mor97","id":37264700,"node_id":"MDQ6VXNlcjM3MjY0NzAw","avatar_url":"https://avatars0.githubusercontent.com/u/37264700?v=4","gravatar_id":"","url":"https://api.github.com/users/Gil-Mor97","html_url":"https://github.com/Gil-Mor97","followers_url":"https://api.github.com/users/Gil-Mor97/followers","following_url":"https://api.github.com/users/Gil-Mor97/following{/other_user}","gists_url":"https://api.github.com/users/Gil-Mor97/gists{/gist_id}","starred_url":"https://api.github.com/users/Gil-Mor97/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Gil-Mor97/subscriptions","organizations_url":"https://api.github.com/users/Gil-Mor97/orgs","repos_url":"https://api.github.com/users/Gil-Mor97/repos","events_url":"https://api.github.com/users/Gil-Mor97/events{/privacy}","received_events_url":"https://api.github.com/users/Gil-Mor97/received_events","type":"User","site_admin":false,"name":"Gil Mor","company":null,"blog":"","location":"Israel","email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":6,"public_gists":0,"followers":0,"following":0,"created_at":"2018-03-11T11:12:16Z","updated_at":"2021-01-01T22:24:01Z","private_gists":0,"total_private_repos":4,"owned_private_repos":4,"disk_usage":301757,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Gil-Mor97 
+[info] 
