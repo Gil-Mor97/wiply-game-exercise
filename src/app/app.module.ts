@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SquareComponent } from './square/square.component';
+import { SquareBoardComponent } from './square-board/square-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SquareComponent
+    SquareComponent,
+    SquareBoardComponent
   ],
   imports: [
     BrowserModule,
