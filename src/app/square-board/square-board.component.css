@@ -1,0 +1,9 @@
+.board div{
+  margin: 0px;
+  display: flex;
+}
+
+.app-square{
+  margin: 0px;
+}
+
