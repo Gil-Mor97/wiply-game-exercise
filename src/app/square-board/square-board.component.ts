@@ -31,8 +31,7 @@ export class SquareBoardComponent implements OnInit {
         map((actions) =>
           actions.map((a) => {
             const data = a.payload.doc.data() as ISquare; //create a square object
-            const id = a.payload.doc.id; //update the square id
-            data.id = id;
+            data.id = a.payload.doc.id; //update the square id
             return { ...data }; //map the data to the ISquare observable array
           })
         )
@@ -41,9 +40,9 @@ export class SquareBoardComponent implements OnInit {
 
   //update the
   updateSquareDB(square: ISquare) {
-    let color: string = this.colorGen.ColorGen(); //generate a new color
+    square.color = this.colorGen.ColorGen(); //generate a new color
     //update the color of the relevant square on our firestore collection
-    this.squareCollectionRef.doc(square.id).update({ color: color });
+    this.squareCollectionRef.doc(square.id).update(square);
   }
 
   //return the square id for the trackBy method, so the squares will be trackable and transitionable.
