@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ColorGen } from '../shared/ColorGen';
 
 @Injectable({
   providedIn: 'root'
