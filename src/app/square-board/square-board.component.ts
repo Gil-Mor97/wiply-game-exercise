@@ -15,7 +15,7 @@ import { map } from 'rxjs/operators';
 })
 export class SquareBoardComponent implements OnInit {
   squaresColors$: Observable<ISquare[]>;
-  squaresColorsArr: ISquare[] = [];
+  //squaresColorsArr: ISquare[] = [];
   squareCollectionRef: AngularFirestoreCollection<ISquare>;
   colorGen: ColorGenService;
 
@@ -48,6 +48,6 @@ export class SquareBoardComponent implements OnInit {
 
   ngOnInit(): void {
     //subscribe to the observable and pass data to squares array
-    this.squaresColors$.subscribe((data) => (this.squaresColorsArr = data));
+    //this.squaresColors$.subscribe((data) => (this.squaresColorsArr = data));
   }
 }
