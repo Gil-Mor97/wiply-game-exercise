@@ -9,7 +9,7 @@ export class ColorGenService {
 
   constructor() { }
 
-  ColorGen(): string{
+  public ColorGen(): string{
     let hexBase: string = '0123456789ABCDEF';
 
     let color = '#'; // <-----------

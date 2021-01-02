@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
-import { ColorGen } from '../shared/ColorGen';
 
 @Component({
   selector: 'app-square',

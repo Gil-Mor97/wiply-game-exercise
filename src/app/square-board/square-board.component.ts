@@ -1,7 +1,6 @@
-import { SquareComponent } from './../square/square.component';
 import { Component, OnInit } from '@angular/core';
 import { ISquare } from '../square/square';
-import { ColorGen } from '../shared/ColorGen';
+import { ColorGenService } from '../services/color-gen.service';
 import {
   AngularFirestore,
   AngularFirestoreCollection,
@@ -18,8 +17,10 @@ export class SquareBoardComponent implements OnInit {
   squaresColors$: Observable<ISquare[]>;
   squaresColorsArr: ISquare[] = [];
   squareCollectionRef: AngularFirestoreCollection<ISquare>;
+  colorGen: ColorGenService;
 
   constructor(private db: AngularFirestore) {
+    this.colorGen = new ColorGenService(); //create a new instance of the color gen service
     //define our ref for the squares collection
     this.squareCollectionRef = db.collection<ISquare>('squares');
 
@@ -39,9 +40,8 @@ export class SquareBoardComponent implements OnInit {
   }
 
   //update the
-  updateSquareDB(square: ISquare, color: string) {
-    console.log(`retreived ${color}!`)
-
+  updateSquareDB(square: ISquare) {
+    let color: string = this.colorGen.ColorGen(); //generate a new color
     //update the color of the relevant square on our firestore collection
     this.squareCollectionRef.doc(square.id).update({ color: color });
   }

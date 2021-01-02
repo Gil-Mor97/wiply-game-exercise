@@ -1,3 +1,3 @@
 <div class="board">
-  <app-square (updateSquare)='updateSquareDB(square, $event)' *ngFor='let square of squaresColorsArr' [color]="square.color" [id]="square.id" class=".app-square"></app-square>
+  <app-square (updateSquare)='updateSquareDB(square)' *ngFor='let square of squaresColorsArr' [color]="square.color" [id]="square.id" class=".app-square"></app-square>
 </div>
