@@ -1,3 +1,6 @@
 <div class="board">
-  <app-square (updateSquare)='updateSquareDB(square)' *ngFor='let square of squaresColors$ | async;' [color]="square.color" [id]="square.id" class=".app-square"></app-square>
+  <app-square
+  (updateSquare)='updateSquareDB(square)'
+  *ngFor='let square of squaresColors$ | async; trackBy: trackId'
+  [color]="square.color" [id]="square.id" class="app-square"></app-square>
 </div>

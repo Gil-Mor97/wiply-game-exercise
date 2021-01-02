@@ -46,6 +46,11 @@ export class SquareBoardComponent implements OnInit {
     this.squareCollectionRef.doc(square.id).update({ color: color });
   }
 
+  //return the square id for the trackBy method, so the squares will be trackable and transitionable.
+  trackId(index: number, square: ISquare): string {
+    return square.id;
+  }
+
   ngOnInit(): void {
     //subscribe to the observable and pass data to squares array
     //this.squaresColors$.subscribe((data) => (this.squaresColorsArr = data));
