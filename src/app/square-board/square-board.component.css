@@ -1,6 +1,8 @@
-.board div{
-  margin: 0px;
+.board {
+  margin: 0px auto;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .app-square{

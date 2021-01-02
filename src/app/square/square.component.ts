@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ColorGen } from '../shared/ColorGen';
 
 @Component({
   selector: 'app-square',
@@ -6,19 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./square.component.css']
 })
 export class SquareComponent implements OnInit {
-  color: string;
-  hexBase: string = '0123456789ABCDEF';
+  @Input() color: string;
 
   constructor() {
-    this.color = this.getRandomColor();
+    this.color = ColorGen();
   }
 
-  getRandomColor(): string {
-    this.color = '#'; // <-----------
-    for (var i = 0; i < 6; i++) {
-      this.color += this.hexBase[Math.floor(Math.random() * 16)];
-    }
-    return this.color;
+  changeColor() {
+    this.color = ColorGen();
   }
 
   ngOnInit(): void {
