@@ -8,20 +8,20 @@ import { ColorGen } from '../shared/ColorGen';
 })
 
 export class SquareComponent implements OnInit {
-  @Input() color: string;
+  @Input() color: string = '';
   @Input() id: string = '';
   @Output() updateSquare: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
     //initiate a square with random color
-    this.color = ColorGen();
+    //this.color = ColorGen();
   }
 
   //handler for color change
   changeColor() {
     // this.color = ColorGen();
     // this.updateSquare.emit(this.color); //emit the update
-    this.updateSquare.emit(ColorGen()); //emit the update
+    this.updateSquare.emit(); //emit the update
   }
 
   ngOnInit(): void {
