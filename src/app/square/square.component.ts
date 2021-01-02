@@ -3,9 +3,8 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-square',
   templateUrl: './square.component.html',
-  styleUrls: ['./square.component.css']
+  styleUrls: ['./square.component.css'],
 })
-
 export class SquareComponent implements OnInit {
   @Input() color: string = '';
   @Input() id: string = '';
@@ -18,12 +17,8 @@ export class SquareComponent implements OnInit {
 
   //handler for color change
   changeColor() {
-    // this.color = ColorGen();
-    // this.updateSquare.emit(this.color); //emit the update
     this.updateSquare.emit(); //emit the update
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
