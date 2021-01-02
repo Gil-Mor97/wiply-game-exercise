@@ -10,10 +10,7 @@ export class SquareComponent implements OnInit {
   @Input() id: string = '';
   @Output() updateSquare: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() {
-    //initiate a square with random color
-    //this.color = ColorGen();
-  }
+  constructor() {}
 
   //handler for color change
   changeColor() {
