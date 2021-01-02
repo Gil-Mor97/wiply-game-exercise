@@ -6,6 +6,13 @@ import { AppComponent } from './app.component';
 import { SquareComponent } from './square/square.component';
 import { SquareBoardComponent } from './square-board/square-board.component';
 
+// Firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +21,11 @@ import { SquareBoardComponent } from './square-board/square-board.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'wiply-game-exercise'),
+    AngularFirestoreModule, // Only required for database features
+    AngularFireAuthModule, // Only required for auth features,
+    AngularFireStorageModule // Only required for storage features
   ],
   providers: [],
   bootstrap: [AppComponent]
