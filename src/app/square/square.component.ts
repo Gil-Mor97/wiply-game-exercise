@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { ColorGen } from '../shared/ColorGen';
 
 @Component({
@@ -10,6 +10,7 @@ import { ColorGen } from '../shared/ColorGen';
 export class SquareComponent implements OnInit {
   @Input() color: string;
   @Input() id: string = '';
+  @Output() updateSquare: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
     this.color = ColorGen();
@@ -17,6 +18,7 @@ export class SquareComponent implements OnInit {
 
   changeColor() {
     this.color = ColorGen();
+    this.updateSquare.emit(this.color);
   }
 
   ngOnInit(): void {

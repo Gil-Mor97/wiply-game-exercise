@@ -58,6 +58,13 @@ export class SquareBoardComponent implements OnInit {
     // });
   }
 
+  updateSquareDB(square: ISquare, color: string) {
+    console.log(`retreived ${color}!`)
+
+    this.squareCollectionRef.doc(square.id).update({ color: color });
+    console.log(`updated ${square.color} successfully`)
+  }
+
   onSquareClicked(message: string, squareId: number): void {
     //this.pageTitle = 'Product List: ' + message;
   }
