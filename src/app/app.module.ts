@@ -23,9 +23,9 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'wiply-game-exercise'),
-    AngularFirestoreModule, // Only required for database features
-    AngularFireAuthModule, // Only required for auth features,
-    AngularFireStorageModule // Only required for storage features
+    AngularFirestoreModule, // for database features
+    AngularFireAuthModule, // for auth features,
+    AngularFireStorageModule // for storage features
   ],
   providers: [],
   bootstrap: [AppComponent]

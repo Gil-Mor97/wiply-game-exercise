@@ -20,52 +20,34 @@ export class SquareBoardComponent implements OnInit {
   squareCollectionRef: AngularFirestoreCollection<ISquare>;
 
   constructor(private db: AngularFirestore) {
+    //define our ref for the squares collection
     this.squareCollectionRef = db.collection<ISquare>('squares');
 
-    this.squaresColors$ = db
-      .collection<ISquare>('squares')
+    //retreive and map the collection's data
+    this.squaresColors$ = this.squareCollectionRef
       .snapshotChanges()
       .pipe(
         map((actions) =>
           actions.map((a) => {
-            const data = a.payload.doc.data() as ISquare;
-            const id = a.payload.doc.id;
+            const data = a.payload.doc.data() as ISquare; //create a square object
+            const id = a.payload.doc.id; //update the square id
             data.id = id;
-            return { ...data };
+            return { ...data }; //map the data to the ISquare observable array
           })
         )
       );
-    //this.squaresColors$.subscribe((data) => (this.squaresColorsArr = data));
-    // let mySquare: ISquare;
-    // for (let square of this.squaresColors) {
-    //   square.color = ColorGen()
-    // }
-
-    // let collect = db.collection<ISquare[]>('squares').snapshotChanges().pipe(
-    //   map(
-    //     actions => actions.map(a => {
-    //                 const data = a.payload.doc.data() as ISquare[];
-    //                 const id = a.payload.doc.id;
-    //                 return { id, ...data };
-    //               })))
-    // console.log(collect);
-
-    // collect.forEach(docs => {
-    //   this.squaresColors$ = docs;
-    //   docs.forEach(doc =>{
-    //     console.log(doc.color);
-    //   })
-    // });
   }
 
+  //update the
   updateSquareDB(square: ISquare, color: string) {
     console.log(`retreived ${color}!`)
 
+    //update the color of the relevant square on our firestore collection
     this.squareCollectionRef.doc(square.id).update({ color: color });
-    console.log(`updated ${square.color} successfully`)
   }
 
   ngOnInit(): void {
+    //subscribe to the observable and pass data to squares array
     this.squaresColors$.subscribe((data) => (this.squaresColorsArr = data));
   }
 }

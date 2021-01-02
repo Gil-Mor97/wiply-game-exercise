@@ -13,12 +13,14 @@ export class SquareComponent implements OnInit {
   @Output() updateSquare: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
+    //initiate a square with random color
     this.color = ColorGen();
   }
 
+  //handler for color change
   changeColor() {
     this.color = ColorGen();
-    this.updateSquare.emit(this.color);
+    this.updateSquare.emit(this.color); //emit the update
   }
 
   ngOnInit(): void {
