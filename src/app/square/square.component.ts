@@ -19,8 +19,9 @@ export class SquareComponent implements OnInit {
 
   //handler for color change
   changeColor() {
-    this.color = ColorGen();
-    this.updateSquare.emit(this.color); //emit the update
+    // this.color = ColorGen();
+    // this.updateSquare.emit(this.color); //emit the update
+    this.updateSquare.emit(ColorGen()); //emit the update
   }
 
   ngOnInit(): void {
