@@ -65,10 +65,6 @@ export class SquareBoardComponent implements OnInit {
     console.log(`updated ${square.color} successfully`)
   }
 
-  onSquareClicked(message: string, squareId: number): void {
-    //this.pageTitle = 'Product List: ' + message;
-  }
-
   ngOnInit(): void {
     this.squaresColors$.subscribe((data) => (this.squaresColorsArr = data));
   }
