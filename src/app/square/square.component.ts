@@ -6,8 +6,10 @@ import { ColorGen } from '../shared/ColorGen';
   templateUrl: './square.component.html',
   styleUrls: ['./square.component.css']
 })
+
 export class SquareComponent implements OnInit {
   @Input() color: string;
+  @Input() id: string = '';
 
   constructor() {
     this.color = ColorGen();
